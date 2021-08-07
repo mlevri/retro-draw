@@ -10,6 +10,17 @@ import { COLORS } from '../utils';
  * to other components. 
  */
 const Palette = (props) => {
+  const{ activeColor, setActiveColor} = props
+  return <div className="palette">{COLORS.map((color, index) => {
+    return (
+      <Cell 
+        key = { 'palette-' + index } 
+        color = { color } 
+        isActive = { activeColor === color ? true : false } 
+        handleClick = { () => setActiveColor(color) }/>
+    )
+  })}</div>
+}
   /**
    * Create constants for activeColor and setActiveColor, reading the value off of the props
    */
@@ -25,7 +36,7 @@ const Palette = (props) => {
    *    - has a prop of handleClick which is a function that calls setActiveColor, passing it 
    *      the color from the map
    */
-  return <div className="palette"></div>
-}
+ 
+
 
 export default Palette;

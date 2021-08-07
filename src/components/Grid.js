@@ -1,12 +1,6 @@
 import React from 'react';
 import Cell from './Cell';
 
-
-/**
- * The Grid component represents the interface for displaying clickable
- * color cells, and needs to update the color of a clicked cell from the
- * activeColor when a user clicks on it.
- */
 const Grid = (props) => {
   const { activeColor, cellList, setCellList } = props
 
@@ -23,6 +17,13 @@ const Grid = (props) => {
   }</div>
 }
 
+export default Grid;
+
+/**
+ * The Grid component represents the interface for displaying clickable
+ * color cells, and needs to update the color of a clicked cell from the
+ * activeColor when a user clicks on it.
+ */
 
   /**
    * Create constants for activeColor, cellList, and setCellList, reading the value off of the props
@@ -42,4 +43,3 @@ const Grid = (props) => {
    */
 
 
-export default Grid;
